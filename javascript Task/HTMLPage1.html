@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="main.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="Jquery.js"></script>
+
+
+</head>
+<body>
+    <div id="Container">
+        <h1><u>Please click image</u></h1>
+        <img src="X-Digital-Group-Bolica-Web-Design.png" id="Smallimg" onclick="LightBox();" />
+    </div>
+    <script type="text/javascript">
+        //////JAVA SCRIPT/////////////
+        function LightBox() {
+
+            /////Shadow//
+            var div = document.getElementById('Container');
+            var newdiv = document.createElement('div');
+            newdiv.id = "ShadowDiv";
+            newdiv.className = "ShadowDiv";
+            div.appendChild(newdiv);
+
+
+            ////Close button to close popup image///
+            var close = document.createElement('div');
+            close.id = "CloseButton";
+            close.className = "CloseButton";
+            close.onclick = "Closeb();"
+            div.appendChild(close);
+            close.innerHTML += "X";
+            $("#CloseButton").click(function () {
+                $("#ShadowDiv").fadeOut("fast");
+                $("#popupimg").fadeOut("fast");
+                $("#CloseButton").fadeOut("fast");
+
+
+            });
+
+            ////popup image/////
+            var img = document.createElement('img');
+            img.src = "X-Digital-Group-Bolica-Web-Design.png";
+            img.id = "popupimg";
+            img.className = "popupimg";
+            div.appendChild(img);
+           
+        }
+       
+
+        /////////JQUERY//////////////
+        $(document).ready(function () {
+            $("#Smallimg").click(function(){
+                $("#ShadowDiv").fadeIn("fast");
+                $("#popupimg").fadeIn("fast");
+                $("#CloseButton").fadeIn("fast");
+            });
+
+        
+        
+            
+            });
+        
+    </script>
+
+</body>
+
+</html>

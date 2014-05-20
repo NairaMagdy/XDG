@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7c2eb7e7-f44b-47db-824b-e99d6ed92db2" name="DataBaseEngine" linkedPackageId="196e6c6d-9450-4abc-8267-7326abe30d4e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="980005ce-9484-426d-a810-6a41431c0632">
+      <profileInstance Id="493ae1e4-3319-4033-bc5c-dad8da13b5b2" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="601ffd7f-2bb5-42cf-902a-e3179788f11e">
+      <profileInstance Id="44386ba2-4ece-48a5-b7da-3715278fce2b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="34dc7ec8-79bd-42d9-b407-7e3b18a3a500" name="IDB" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dd1dee0c-0cd6-4310-b484-f01e9a7af4f9" />
+        <suppliersInternal>
+          <dependency Id="5c8cd730-139e-4c70-882b-429754bfd7e7">
+            <classMoniker Id="f5cd5f1a-c6dd-4fad-b10d-b11f2a639f1c" LastKnownName="DBFactory" />
+            <elementDefinition Id="77d3bcaa-07cc-49ba-8fe8-f52fc4ef407a" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperations>
+          <operation Id="595a5179-85c8-4543-92cd-fef1ffa8ccb5" name="ExecuteNonQuery" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b2976712-003c-4380-be38-8c1a80e38a70" />
+          </operation>
+          <operation Id="f9cbb204-0ed0-40c4-adcf-7dc5fde95a37" name="ExcuteReader" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ab62c250-4593-4063-8e7a-c3c17262e185" />
+          </operation>
+          <operation Id="f69d7d98-697e-4f1e-8837-fc3dd10c5fe8" name="ExecuteScalar" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="59ed0ed0-3650-462c-8d71-86b06f782c40" />
+          </operation>
+          <operation Id="fb0af354-57a3-42e1-af80-2ab67f1ff598" name="ExecuteDataTable" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ca388b00-679f-464f-8433-03c2908f9cbf" />
+          </operation>
+          <operation Id="6ab00463-28c7-4952-be98-900888524303" name="ExecuteDataSet" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a85ca234-7a07-4fc1-acf5-c536912da573" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bbd6d34c-26ea-44ef-8e06-529ebceb71cb" name="SQL" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9970dd80-2474-4eb2-9622-ec66b3476a0d" />
+        <suppliersInternal>
+          <interfaceRealization Id="f1a889df-7743-43e8-9f2f-9c34da0232df">
+            <interfaceMoniker Id="34dc7ec8-79bd-42d9-b407-7e3b18a3a500" LastKnownName="IDB" />
+            <elementDefinition Id="fdd01383-86ef-4187-9aec-d6f4caa44a7a" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="834dac96-673a-4879-961a-5e4c42251c4c" name="ExecuteNonQuery" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dc83930e-f1a6-4d95-886b-d13ef6de7864" />
+          </operation>
+          <operation Id="3c1cd71b-b3ae-49dd-8051-5109004758d1" name="ExcuteReader" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3803e484-500e-4bcd-bb72-cc788c04f32c" />
+          </operation>
+          <operation Id="9966e9b1-c00e-4f95-84a4-4567c0403984" name="ExecuteScalar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d1475621-4714-49d8-93ed-e35be5dd4490" />
+          </operation>
+          <operation Id="25f71422-bd5b-415b-bb5d-b9983a329e01" name="ExecuteDataTable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a8bac568-0a2d-4a77-84bd-5280d9437c7d" />
+          </operation>
+          <operation Id="aeb0724c-4258-4570-8281-75c8aff9df98" name="ExecuteDataSet" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="48b8d28c-d945-42ef-bd54-cdcd20872c8a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3c61f0ed-fbcc-43cb-a2bf-efe78446ba83" name="MySQL" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="45bdfdff-4bab-4be9-b1cb-6ebdac1f923c" />
+        <suppliersInternal>
+          <interfaceRealization Id="f9fa514a-c9c3-4c2f-bc5b-d5b0643742de">
+            <interfaceMoniker Id="34dc7ec8-79bd-42d9-b407-7e3b18a3a500" LastKnownName="IDB" />
+            <elementDefinition Id="0c2ad2e3-f672-4241-b258-e80c4a66be23" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="b8d04db9-f6b4-4cbe-b055-00b00c837269" name="ExecuteNonQuery" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4e1ef02e-1888-4d78-86a6-2e60bc2de5a8" />
+          </operation>
+          <operation Id="772e53c4-df0c-4410-805b-de975ba9a9e0" name="ExcuteReader" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7dfcbc78-64f6-47e3-9c25-f3494f12fb81" />
+          </operation>
+          <operation Id="1242995a-0f98-4d09-8913-ecb220b3454b" name="ExecuteScalar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0ca9b0f7-825b-4f01-bea8-58c0e6d4f43e" />
+          </operation>
+          <operation Id="e76e917f-78be-4dfe-b2fa-1d323f46fdcd" name="ExecuteDataTable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6b06dda5-4746-46b1-88f0-4b8d9972d659" />
+          </operation>
+          <operation Id="7dfec593-a1e2-47c8-add0-212b9316a8e5" name="ExecuteDataSet" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7d40903f-52fb-444d-a652-4b3d7de2ba3d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="57c28d1a-d177-45ab-9262-7e264a8c4298" name="Oracle" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b46517b2-0cdf-44c5-bd7d-aa38e585bfcd" />
+        <suppliersInternal>
+          <interfaceRealization Id="f157ad91-fa63-4b01-b513-e1c3b8885bd6">
+            <interfaceMoniker Id="34dc7ec8-79bd-42d9-b407-7e3b18a3a500" LastKnownName="IDB" />
+            <elementDefinition Id="eb84481a-2cab-4838-9e3b-830ff773343b" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="4526ac4f-f4f6-4623-9be8-99c1ffcfc0f3" name="ExecuteNonQuery" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0e1cf23f-3750-418d-bbac-612ebba2a29e" />
+          </operation>
+          <operation Id="fb82dd72-ab3c-4777-806b-b6ed7a4eeabe" name="ExcuteReader" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f9163dde-8928-4a21-92bd-09da1601f0b3" />
+          </operation>
+          <operation Id="d1091b63-532d-486d-b5d0-08b264c889f9" name="ExecuteScalar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a735399c-85f6-4cd7-a1cd-5c0137fcf9b8" />
+          </operation>
+          <operation Id="30cd6956-a6a1-401d-b9be-80fa6f4c565e" name="ExecuteDataTable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="aae8961a-4f99-40ff-b955-ef8a8a90f889" />
+          </operation>
+          <operation Id="4d9bab5a-20a5-4a86-87d8-1b1b0223bc34" name="ExecuteDataSet" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="be240939-bfca-4e62-b2fe-0ee407a9058a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f5cd5f1a-c6dd-4fad-b10d-b11f2a639f1c" name="DBFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="07ed8f39-d949-4abe-827a-f7fa25ced7ca" />
+        <ownedOperationsInternal>
+          <operation Id="bfbc8bfb-45ae-41f0-9145-e5bb6c8f89e7" name="GetDBType" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="14cd69d2-383f-41a3-83ae-7555e7034dd0" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="196e6c6d-9450-4abc-8267-7326abe30d4e" name="modling">
+    <elementDefinition Id="aaad01ac-0134-4c30-a016-0f2ae698c0d0" />
+  </package>
+</logicalClassDesignerModel>

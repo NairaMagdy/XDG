@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master1.master" AutoEventWireup="true" CodeFile="StudentMasterPage.master.cs" Inherits="StudentMasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+	<link rel='stylesheet' type='text/css' href='styles/styles.css' />
+    <div id='cssmenu'>
+        <ul>
+           <li class='active'><a href='Student.aspx'><span>Profile</span></a></li>
+             <li class='active'><a href='EditStudentProfile.aspx'><span>Edit my Profile</span></a></li>     
+        </ul>
+    </div>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="316e03fe-6546-49de-9d73-f9036f156193" name="HtmlObjects" linkedPackageId="05a6b955-2b60-4e2c-866d-b84b40dbd455" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b9f45577-f5ad-47fe-b0e2-41d6c49e00fd">
+      <profileInstance Id="d5c90945-7fad-48b5-b735-35ec3fedaf8b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="b5d4b9f5-2131-4a64-a5c8-76290ba23167">
+      <profileInstance Id="77f1a040-7264-4e17-8a76-66221f192b6b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c55020b8-7a46-4b2a-8b3d-136146989821" name="HTML" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b65a62e7-9af8-47e3-b264-1b4d0eacd94c" />
+        <ownedOperationsInternal>
+          <operation Id="d4b41748-7e07-467e-aaf0-7cb23f94ac19" name="Body" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fd922e03-74ab-4488-9da7-2106ce518af1" />
+          </operation>
+          <operation Id="6c3ddc0c-f11e-49cd-829a-1aff076050dc" name="Head" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f3a49a53-39cf-49da-be67-b975e155bdad" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="05a6b955-2b60-4e2c-866d-b84b40dbd455" name="modling">
+    <elementDefinition Id="aaad01ac-0134-4c30-a016-0f2ae698c0d0" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,74 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master1.master.cs" Inherits="Master1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+<title>Education Time | 3 Columns</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="styles/layout.css" type="text/css" />
+<!-- 3 Column Stylesheet Added To The Page And Not To The Layout.css -->
+<link rel="stylesheet" href="styles/3_column.css" type="text/css" />
+</head>
+<body id="top">
+    <form id="form1" runat="server">
+<div class="wrapper row1">
+  <div id="header" class="clear">
+    <div class="fl_left">
+      <h1><a href="HomePage.aspx">Education Time</a></h1>
+      <p>Free Website Template</p>
+    </div>
+      &nbsp;</div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper row2">
+  <div id="topnav">
+    <ul>
+      <li class="active"><a href="HomePage.aspx">Home</a></li>
+      <li><a href="style-demo.html">Conatct Us</a></li>
+      <li><a href="About Us.aspx">About US</a></li>
+      <li><asp:LinkButton ID="LinkButton1" runat="server" Height="16px" OnClick="LinkButton1_Click">Logout</asp:LinkButton></li>
+         
+
+    </ul>
+    <div  class="clear"></div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper row4">
+  <div id="container" class="clear">
+    <!-- ####################################################################################################### -->
+    <div id="left_column">
+      <div class="holder">
+        <h2 class="title">Quick Links</h2>
+         
+          
+         
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+          </asp:ContentPlaceHolder>
+         
+          
+         
+      </div>
+
+    </div>
+    <!-- ############ -->
+    <div id="content">
+      <h1 class="title">Welcome: <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label></h1>
+     
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+             
+          </asp:ContentPlaceHolder>
+        
+    
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+    <!-- ####################################################################################################### -->
+  </div>
+
+<!-- ####################################################################################################### -->
+
+    </form>
+</body>
+</html>

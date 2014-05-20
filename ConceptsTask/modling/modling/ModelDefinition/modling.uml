@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="aaad01ac-0134-4c30-a016-0f2ae698c0d0"
+  name="modling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="dd1dee0c-0cd6-4310-b484-f01e9a7af4f9"
+        name="IDB"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="77d3bcaa-07cc-49ba-8fe8-f52fc4ef407a">
+            <classMoniker
+              Id="07ed8f39-d949-4abe-827a-f7fa25ced7ca"
+              LastKnownName="DBFactory"
+              LastKnownLocation="modling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperations>
+          <operation
+            Id="b2976712-003c-4380-be38-8c1a80e38a70"
+            name="ExecuteNonQuery"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ab62c250-4593-4063-8e7a-c3c17262e185"
+            name="ExcuteReader"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="59ed0ed0-3650-462c-8d71-86b06f782c40"
+            name="ExecuteScalar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ca388b00-679f-464f-8433-03c2908f9cbf"
+            name="ExecuteDataTable"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a85ca234-7a07-4fc1-acf5-c536912da573"
+            name="ExecuteDataSet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9970dd80-2474-4eb2-9622-ec66b3476a0d"
+        name="SQL"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="fdd01383-86ef-4187-9aec-d6f4caa44a7a">
+            <interfaceMoniker
+              Id="dd1dee0c-0cd6-4310-b484-f01e9a7af4f9"
+              LastKnownName="IDB"
+              LastKnownLocation="modling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="dc83930e-f1a6-4d95-886b-d13ef6de7864"
+            name="ExecuteNonQuery"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3803e484-500e-4bcd-bb72-cc788c04f32c"
+            name="ExcuteReader"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d1475621-4714-49d8-93ed-e35be5dd4490"
+            name="ExecuteScalar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a8bac568-0a2d-4a77-84bd-5280d9437c7d"
+            name="ExecuteDataTable"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="48b8d28c-d945-42ef-bd54-cdcd20872c8a"
+            name="ExecuteDataSet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="45bdfdff-4bab-4be9-b1cb-6ebdac1f923c"
+        name="MySQL"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="0c2ad2e3-f672-4241-b258-e80c4a66be23">
+            <interfaceMoniker
+              Id="dd1dee0c-0cd6-4310-b484-f01e9a7af4f9"
+              LastKnownName="IDB"
+              LastKnownLocation="modling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4e1ef02e-1888-4d78-86a6-2e60bc2de5a8"
+            name="ExecuteNonQuery"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7dfcbc78-64f6-47e3-9c25-f3494f12fb81"
+            name="ExcuteReader"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0ca9b0f7-825b-4f01-bea8-58c0e6d4f43e"
+            name="ExecuteScalar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6b06dda5-4746-46b1-88f0-4b8d9972d659"
+            name="ExecuteDataTable"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7d40903f-52fb-444d-a652-4b3d7de2ba3d"
+            name="ExecuteDataSet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b46517b2-0cdf-44c5-bd7d-aa38e585bfcd"
+        name="Oracle"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="eb84481a-2cab-4838-9e3b-830ff773343b">
+            <interfaceMoniker
+              Id="dd1dee0c-0cd6-4310-b484-f01e9a7af4f9"
+              LastKnownName="IDB"
+              LastKnownLocation="modling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0e1cf23f-3750-418d-bbac-612ebba2a29e"
+            name="ExecuteNonQuery"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f9163dde-8928-4a21-92bd-09da1601f0b3"
+            name="ExcuteReader"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a735399c-85f6-4cd7-a1cd-5c0137fcf9b8"
+            name="ExecuteScalar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="aae8961a-4f99-40ff-b955-ef8a8a90f889"
+            name="ExecuteDataTable"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="be240939-bfca-4e62-b2fe-0ee407a9058a"
+            name="ExecuteDataSet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="07ed8f39-d949-4abe-827a-f7fa25ced7ca"
+        name="DBFactory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="14cd69d2-383f-41a3-83ae-7555e7034dd0"
+            name="GetDBType"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b65a62e7-9af8-47e3-b264-1b4d0eacd94c"
+        name="HTML"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="fd922e03-74ab-4488-9da7-2106ce518af1"
+            name="Body"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f3a49a53-39cf-49da-be67-b975e155bdad"
+            name="Head"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
